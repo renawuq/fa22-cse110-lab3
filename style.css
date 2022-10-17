@@ -1,0 +1,147 @@
+/* Universal Selector (*) */
+/* Reset every default values to zero */
+* {
+    padding: 0;
+    /* auto margins*/
+    margin: auto;
+    font-family: 'Courier New', Courier, monospace;
+    background: rgb(219, 215, 215)
+}
+
+/* Element Selector*/
+header{
+    /*relative unit #1*/
+    font-size: 90%;
+    /* margin long */
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 35%; 
+    margin-right: 35%;
+    color:rgb(119, 0, 128);
+}
+
+/* title */
+.title {
+    font-family: "Inter", sans-serif;
+    color: #000;
+    /* absolute units #1*/
+    padding-top: 20px;
+    text-align: center;
+    font-weight: 400;
+    /* relative unit #2 */
+    line-height: 2em;
+    text-shadow: 0px 4px 4px rgba(1, 1, 0, 0.25);
+}
+/* id */
+#subtitle{
+    border-collapse:collapse;
+    border:2px solid red; 
+    text-align: center;
+    /* absolute units #2 */
+    font-size: 0.7cm;
+    color: red;
+}
+/*for date*/
+#date{
+    text-align: center;
+    /* absolute units #3 */
+    font-size: 8pt;
+    padding:5px
+}
+/* namelist */
+#namelist{
+    /* margin short */
+    margin:1% 35% 1% 45%
+    
+}
+/* list for attendance */
+#list{
+    /* long border */
+    border-radius: 100px;
+    border-style: solid;
+    border-color:darkorchid;
+    border-width: 5px;
+}
+/*for agenda*/
+#agenda{
+    /* short border */
+    border: 5px dashed grey;
+    margin-top: 1em;
+    /* relative unit #2 */
+    font-size: 2.5vw;
+    /* short padding */
+    padding: 1% 0% 1% 40%
+
+}
+h2.blod{
+    color:red;
+    /* display block*/
+    display: block;
+}
+p.none{
+    /* display none */
+    display:none;
+}
+/* title of agenda*/
+#agenda> #agendaT{
+    color:darkblue;
+}
+
+/* from last meeting (article section)*/
+article{
+    /* text style */
+    color:black;
+    border: 2px solid black;
+    text-decoration:underline red;
+    text-align: center;
+    padding: 5%;
+}
+/* Pseudo-class Selector*/
+button:hover{
+    color:red
+}
+
+/* Attribute Selector */
+a[target]{
+    background-color: pink;
+    /*long padding */
+    padding-top: 0%;
+    padding-bottom: 2%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+/* Selector List */
+h2,footer{
+    text-decoration:overline;
+}
+
+/* Descendant Combinator */
+#namelist li{
+    /* use rgb color */
+    color:rgb(189, 66, 156)
+}
+
+/* Child Combinator */
+#agenda > ol > li{
+    color:blue
+}
+
+/* General sibling combinator */
+#info ~ p{
+    /* use hex code */
+    background-color: #FF0;
+}
+
+/* Adjacent sibling combinator */
+#info + p>strong{
+    /* use color name, set background color */
+    background-color: aqua;
+}
+
+/* Combining Two Selectors */ 
+#video.v{
+    /* use hsl for text/background color*/
+    color: hsl(30, 100%, 50%);
+    background-color: hsl(120, 100%, 50%);
+}
