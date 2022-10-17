@@ -55,13 +55,7 @@ header{
     font-size: 0.7cm;
     color: red;
 }
-/*for date*/
-#date{
-    text-align: center;
-    /* absolute units #3 */
-    font-size: 8pt;
-    padding:5px
-}
+
 /* namelist */
 #namelist{
     /* margin short */
