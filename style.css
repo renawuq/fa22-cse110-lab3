@@ -1,10 +1,24 @@
+/* Media Query */
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: black;
+    }
+}
+/* 3rd party font */
+@font-face {
+    font-family: FuzzyBubbles;
+    src: url(Fuzzy_Bubbles/FuzzyBubbles-Regular.ttf);
+}
 /* Universal Selector (*) */
 /* Reset every default values to zero */
 * {
     padding: 0;
+    /* sizing */
+    max-width:100%;
+    max-height: 100%;
     /* auto margins*/
     margin: auto;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: FuzzyBubbles;
     background: rgb(219, 215, 215)
 }
 
@@ -62,8 +76,11 @@ header{
     border-color:darkorchid;
     border-width: 5px;
 }
+
 /*for agenda*/
 #agenda{
+    /* position */
+    position:sticky;
     /* short border */
     border: 5px dashed grey;
     margin-top: 1em;
@@ -77,6 +94,11 @@ h2.blod{
     color:red;
     /* display block*/
     display: block;
+}
+strong.inline{
+    color:green;
+    /* display inline */
+    display: inline-block;
 }
 p.none{
     /* display none */
@@ -98,17 +120,95 @@ article{
 }
 /* Pseudo-class Selector*/
 button:hover{
+    /* postion with hover */
+    position: absolute;
     color:red
 }
-
+article>#info>#info2{
+    /* sizing */
+    height: 35px;
+    width: 100%;
+}
+/* For person'A idea*/
+#info>details{
+    color:blue;
+    text-align: left;
+    text-decoration: underline rgb(219, 215, 215);
+}
 /* Attribute Selector */
 a[target]{
-    background-color: pink;
     /*long padding */
     padding-top: 0%;
     padding-bottom: 2%;
     padding-left: 10%;
     padding-right: 10%;
+}
+/* relative position with hover */
+a[target]:hover{
+    position: relative;
+    color:green;
+}
+
+/* absolute position with active */
+a[target]:active{
+    position: absolute;
+    color:yellow;
+}
+
+/* flexbox*/
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-shrink: 6;
+    flex-flow: column;
+    background-color: DodgerBlue;
+}
+
+.flex-container > #soso {
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+}
+.flex-container > #good {
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+    font-style: italic;
+    font-size: 50px;
+}
+/* grid */
+.grid-container {
+    display: grid;
+    height: 400px;
+    align-content: space-between;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    background-color: darkblue;
+    padding: 10px;
+}
+
+.grid-container > #random {
+    background-color: pink;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+
+.grid-container > #mood {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: left;
+    padding: 20px 0;
+    font-size: 30px;
+}
+
+
+.grid-container > #mood2 {
+    background-color: lightblue;
+    text-align: right;
+    padding: 20px 0;
+    font-size: 30px;
 }
 
 /* Selector List */
@@ -141,6 +241,7 @@ h2,footer{
 
 /* Combining Two Selectors */ 
 #video.v{
+    margin:auto;
     /* use hsl for text/background color*/
     color: hsl(30, 100%, 50%);
     background-color: hsl(120, 100%, 50%);
